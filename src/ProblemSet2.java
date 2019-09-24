@@ -14,6 +14,8 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
+// cd ~/Desktop/APCSA/pset-2/src/
+
 import java.util.Scanner;
 
 public class ProblemSet2 {
@@ -51,6 +53,15 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+				System.out.print("\nEnter a dollar amount: ");
+				double dollarAmount = Double.valueOf(in.next());
+
+				double quarterAmount = Math.floor(dollarAmount / 0.25);
+				dollarAmount %= 0.25;
+				double dimeAmount = Math.floor(dollarAmount / 0.10);
+				dollarAmount %= 0.10;
+				double nickelAmount = Math.floor(dollarAmount / 0.10);
+				dollarAmount %= 0.05;
 
 
         /*
