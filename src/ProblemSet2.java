@@ -88,7 +88,43 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+				final double FIVE_DOLLAR_VALUE = 5;
+				final double TEN_DOLLAR_VALUE = 10;
 
+				System.out.print("\nEnter dollar amount: ");
+				moneyAmount = Double.valueOf(in.next());
+
+				int tenAmount = (int) Math.floor(moneyAmount / TEN_DOLLAR_VALUE);
+				moneyAmount %= TEN_DOLLAR_VALUE;
+				int fiveAmount = (int) Math.floor(moneyAmount / FIVE_DOLLAR_VALUE);
+				moneyAmount %= FIVE_DOLLAR_VALUE;
+				dollarAmount = (int) Math.floor(moneyAmount);
+				moneyAmount %= DOLLAR_VALUE;
+
+				quarterAmount = (int) Math.floor(moneyAmount / QUARTER_VALUE);
+				moneyAmount %= QUARTER_VALUE;
+				dimeAmount = (int) Math.floor(moneyAmount / DIME_VALUE);
+				moneyAmount %= DIME_VALUE;
+				nickelAmount = (int) Math.floor(moneyAmount / NICKEL_VALUE);
+				moneyAmount %= NICKEL_VALUE;
+				pennyAmount = (int) Math.round(moneyAmount * 100);
+
+				int numberOfDollars = tenAmount + fiveAmount + dollarAmount;
+				int numberOfCoins = quarterAmount + dimeAmount + nickelAmount + pennyAmount;
+
+				/*
+				* testing to make sure the correct numbers of stuff is there
+				System.out.println("ten DOLLARS\t : " + dollarAmount);
+				System.out.println("five DOLLARS\t : " + dollarAmount);
+				System.out.println("DOLLARS\t : " + dollarAmount);
+				System.out.println("QUARTERS : " + quarterAmount);
+				System.out.println("DIMES\t : " + dimeAmount);
+				System.out.println("NICKELS\t : " + nickelAmount);
+				System.out.println("PENNIES\t : " + pennyAmount);
+				*/
+
+				System.out.println("BILLS : " + numberOfDollars);
+				System.out.println("COINS : " + numberOfCoins);
 
         /*
          * Exercise 4.
