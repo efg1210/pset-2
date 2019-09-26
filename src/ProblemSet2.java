@@ -30,21 +30,21 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-      System.out.print("\nEnter your first name: ");
-			String userFirstName = in.nextLine();
-			System.out.print("Enter your last name: ");
-			String userLastName = in.nextLine();
-			System.out.print("Enter your grade: ");
-			String userGrade = in.nextLine();
-			System.out.print("Enter your age: ");
-			String userAge = in.nextLine();
-			System.out.print("Enter your hometown: ");
-			String userTown = in.nextLine();
+				System.out.print("\nEnter your first name: ");
+				String userFirstName = in.nextLine();
+				System.out.print("Enter your last name: ");
+				String userLastName = in.nextLine();
+				System.out.print("Enter your grade: ");
+				String userGrade = in.nextLine();
+				System.out.print("Enter your age: ");
+				String userAge = in.nextLine();
+				System.out.print("Enter your hometown: ");
+				String userTown = in.nextLine();
 
-			System.out.println("NAME\t : " + userFirstName + " " + userLastName);
-			System.out.println("GRADE\t : " + userGrade);
-			System.out.println("AGE\t : " + userAge);
-			System.out.println("HOMETOWN : " + userTown);
+				System.out.println("NAME\t : " + userFirstName + " " + userLastName);
+				System.out.println("GRADE\t : " + userGrade);
+				System.out.println("AGE\t : " + userAge);
+				System.out.println("HOMETOWN : " + userTown);
 
         /*
          * Exercise 2.
@@ -53,16 +53,29 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+				final double dollarValue = 1;
+				final double quarterValue = 0.25;
+				final double dimeValue = 0.10;
+				final double nickelValue = 0.05;
+
 				System.out.print("\nEnter a dollar amount: ");
-				double dollarAmount = Double.valueOf(in.next());
+				double moneyAmount = Double.valueOf(in.next());
 
-				double quarterAmount = Math.floor(dollarAmount / 0.25);
-				dollarAmount %= 0.25;
-				double dimeAmount = Math.floor(dollarAmount / 0.10);
-				dollarAmount %= 0.10;
-				double nickelAmount = Math.floor(dollarAmount / 0.10);
-				dollarAmount %= 0.05;
+				int dollarAmount = (int) Math.floor(moneyAmount);
+				moneyAmount %= dollarValue;
+				int quarterAmount = (int) Math.floor(moneyAmount / quarterValue);
+				moneyAmount %= quarterValue;
+				int dimeAmount = (int) Math.floor(moneyAmount / dimeValue);
+				moneyAmount %= dimeValue;
+				int nickelAmount = (int) Math.floor(moneyAmount / nickelValue);
+				moneyAmount %= nickelValue;
+				int pennyAmount = (int) (moneyAmount * 100);
 
+				System.out.println("DOLLARS\t : " + dollarAmount);
+				System.out.println("QUARTERS : " + quarterAmount);
+				System.out.println("DIMES\t : " + dimeAmount);
+				System.out.println("NICKELS\t : " + nickelAmount);
+				System.out.println("PENNIES\t : " + pennyAmount);
 
         /*
          * Exercise 3.
@@ -71,7 +84,7 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-
+				
 
         /*
          * Exercise 4.
