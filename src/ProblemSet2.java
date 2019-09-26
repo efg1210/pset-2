@@ -133,7 +133,20 @@ public class ProblemSet2 {
          * and inches.
          */
 
+				final int INCHES_IN_MILE = 63360;
+				final int INCHES_IN_YARD = 36;
+				final int INCHES_IN_FOOT = 12;
 
+				System.out.print("\nEnter a number of inches: ");
+				int userInches = (int) Math.round(in.nextInt());
+				in.nextLine();
+
+				int mileAmount = userInches / INCHES_IN_MILE;
+				mileAmount %= INCHES_IN_MILE;
+				System.out.println("MILES\t: " + mileAmount);
+				int yardAmount = userInches / INCHES_IN_YARD;
+				yardAmount %= INCHES_IN_YARD;
+				System.out.println("YARDS\t: " + yardAmount);
 
         /*
          * Exercise 5.
