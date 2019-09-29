@@ -208,7 +208,24 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
+        System.out.print("\n\nEnter a length: ");
+   			int userRectLength = (int) Math.round(in.nextInt());
+   			in.nextLine();
 
+        System.out.print("Enter a width: ");
+   			int userRectWidth = (int) Math.round(in.nextInt());
+   			in.nextLine();
+
+        double rectArea = userRectLength * userRectWidth;
+        double rectPerimeter = (userRectLength * 2) + (userRectWidth * 2);
+        double rectDiagonalLength = Math.hypot(userRectLength, userRectWidth);
+
+        System.out.print("\nAREA\t\t\b\b\b\b\b\b: ");
+        System.out.printf("%.2f", rectArea);
+        System.out.print("\nPERIMETER : ");
+        System.out.printf("%.2f", rectPerimeter);
+        System.out.print("\nDIAGONAL\t\b\b\b\b\b\b: ");
+        System.out.printf("%.2f", rectDiagonalLength);
 
         /*
          * Exercise 8.
