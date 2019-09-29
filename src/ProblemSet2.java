@@ -142,16 +142,17 @@ public class ProblemSet2 {
 				in.nextLine();
 
 				int mileAmount = userInches / INCHES_IN_MILE;
-				mileAmount %= INCHES_IN_MILE;
-				System.out.println("MILES\t: " + mileAmount);
+				userInches %= INCHES_IN_MILE;
 				int yardAmount = userInches / INCHES_IN_YARD;
-				yardAmount %= INCHES_IN_YARD;
-				System.out.println("YARDS\t: " + yardAmount);
+				userInches %= INCHES_IN_YARD;
         int footAmount = userInches / INCHES_IN_FOOT;
-				footAmount %= INCHES_IN_FOOT;
-				System.out.println("FEET\t: " + footAmount);
+				userInches %= INCHES_IN_FOOT;
         int inchAmount = userInches;
-				System.out.println("INCHES\t: " + inchAmount);
+
+        System.out.println("MILES\t: " + mileAmount);
+        System.out.println("YARDS\t: " + yardAmount);
+        System.out.println("FEET\t: " + footAmount);
+        System.out.println("INCHES\t: " + inchAmount);
 
         /*
          * Exercise 5.
