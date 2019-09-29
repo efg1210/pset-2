@@ -147,6 +147,11 @@ public class ProblemSet2 {
 				int yardAmount = userInches / INCHES_IN_YARD;
 				yardAmount %= INCHES_IN_YARD;
 				System.out.println("YARDS\t: " + yardAmount);
+        int footAmount = userInches / INCHES_IN_FOOT;
+				footAmount %= INCHES_IN_FOOT;
+				System.out.println("FEET\t: " + footAmount);
+        int inchAmount = userInches;
+				System.out.println("INCHES\t: " + inchAmount);
 
         /*
          * Exercise 5.
