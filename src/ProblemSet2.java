@@ -233,7 +233,19 @@ public class ProblemSet2 {
          * Given a side length, print the area and perimeter of the corresponding hexagon.
          */
 
+        final double HEXAGON_AREA_CONSTANT = (Math.sqrt(3) * 3) / 2;
 
+        System.out.print("\n\nEnter a side: ");
+   			int userHexSide = (int) Math.round(in.nextInt());
+   			in.nextLine();
+
+        double hexArea = HEXAGON_AREA_CONSTANT * Math.pow(userHexSide, 2);
+        double hexPerimeter = userHexSide * 6;
+
+        System.out.print("\nAREA\t\t\b\b\b\b\b\b: ");
+        System.out.printf("%.2f", hexArea);
+        System.out.print("\nPERIMETER : ");
+        System.out.printf("%.2f", hexPerimeter);
 
         /*
          * Exercise 9.
@@ -242,6 +254,28 @@ public class ProblemSet2 {
          */
 
 
+        /*
+
+        code that may work better who knows we'll find out eventually
+
+        double halfStrLength = userString.length() - 1;
+        halfStrLength *= 10;
+        halfStrLength /= 2;
+        halfStrLength /= 10;
+        halfStrLength = Math.floor(halfStrLength);
+        String firstHalfStr = userString.substring(0, halfStrLength);
+        String secondHalfStr = userString.substring(halfStrLength);
+
+        */
+
+        System.out.print("\n\nEnter a String: ");
+    		String userString = in.nextLine();
+
+        int halfStrLength = (int) Math.ceil(((userString.length()) * 10) / 20);
+        String firstHalfStr = userString.substring(0, halfStrLength);
+        String secondHalfStr = userString.substring(halfStrLength);
+
+        System.out.print("\n" + secondHalfStr + firstHalfStr);
 
         /*
          * Exercise 10.
@@ -249,7 +283,16 @@ public class ProblemSet2 {
          * Given a first, middle, and last name, print the corresponding initials.
          */
 
+        System.out.print("\n\nEnter your first name: ");
+     		String userFName = in.nextLine();
+        System.out.print("Enter your middle name: ");
+     		String userMName = in.nextLine();
+        System.out.print("Enter your last name: ");
+     		String userLName = in.nextLine();
 
+        String userInitials = (userFName.substring(0, 1) + userMName.substring(0, 1) + userLName.substring(0, 1));
+
+        System.out.println("\n" + userInitials);
 
         in.close();
     }
