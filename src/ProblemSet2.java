@@ -35,9 +35,11 @@ public class ProblemSet2 {
 				System.out.print("Enter your last name: ");
 				String userLastName = in.nextLine();
 				System.out.print("Enter your grade: ");
-				String userGrade = in.nextLine();
+				int userGrade = (int) Math.round(in.nextInt());
+   			in.nextLine();
 				System.out.print("Enter your age: ");
-				String userAge = in.nextLine();
+				int userAge = (int) Math.round(in.nextInt());
+   			in.nextLine();
 				System.out.print("Enter your hometown: ");
 				String userTown = in.nextLine();
 
@@ -235,7 +237,7 @@ public class ProblemSet2 {
 
         final double HEXAGON_AREA_CONSTANT = (Math.sqrt(3) * 3) / 2;
 
-        System.out.print("\n\nEnter a side: ");
+        System.out.print("\n\nEnter a side length: ");
    			int userHexSide = (int) Math.round(in.nextInt());
    			in.nextLine();
 
