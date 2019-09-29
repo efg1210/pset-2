@@ -123,7 +123,7 @@ public class ProblemSet2 {
 				System.out.println("PENNIES\t : " + pennyAmount);
 				*/
 
-				System.out.println("BILLS : " + numberOfDollars);
+				System.out.println("\nBILLS : " + numberOfDollars);
 				System.out.println("COINS : " + numberOfCoins);
 
         /*
@@ -149,7 +149,7 @@ public class ProblemSet2 {
 				userInches %= INCHES_IN_FOOT;
         int inchAmount = userInches;
 
-        System.out.println("MILES\t\b: " + mileAmount);
+        System.out.println("\nMILES\t\b: " + mileAmount);
         System.out.println("YARDS\t\b: " + yardAmount);
         System.out.println("FEET\t\b: " + footAmount);
         System.out.println("INCHES\t\b: " + inchAmount);
@@ -174,9 +174,9 @@ public class ProblemSet2 {
  				userCenti %= CENTI_IN_METER;
         int centiAmount = userCenti;
 
-         System.out.println("KILOMETERS  : " + kiloAmount);
-         System.out.println("METERS\t\t\b\b\b\b: " + meterAmount);
-         System.out.println("CENTIMETERS : " + centiAmount);
+        System.out.println("\nKILOMETERS\t\b\b\b\b: " + kiloAmount);
+        System.out.println("METERS\t\t\b\b\b\b: " + meterAmount);
+        System.out.println("CENTIMETERS : " + centiAmount);
 
         /*
          * Exercise 6.
@@ -184,7 +184,22 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
+        System.out.print("\nEnter a diameter: ");
+  			int userDiameter = (int) Math.round(in.nextInt());
+  			in.nextLine();
 
+        double circleRadius = userDiameter * 10;
+        circleRadius /= 2;
+        circleRadius /= 10;
+        double circleArea = Math.pow(circleRadius, 2);
+        circleArea *= Math.PI;
+
+        double circleCircumference = userDiameter * Math.PI;
+
+        System.out.print("\nAREA\t\t\b\b: ");
+        System.out.printf("%.2f", circleArea);
+        System.out.print("\nCIRCUMFERENCE : ");
+        System.out.printf("%.2f", circleCircumference);
 
         /*
          * Exercise 7.
