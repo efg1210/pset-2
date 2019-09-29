@@ -14,8 +14,6 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
-// cd ~/Desktop/APCSA/pset-2/src/
-
 import java.util.Scanner;
 
 public class ProblemSet2 {
@@ -113,17 +111,6 @@ public class ProblemSet2 {
 
 				int numberOfDollars = tenAmount + fiveAmount + dollarAmount;
 				int numberOfCoins = quarterAmount + dimeAmount + nickelAmount + pennyAmount;
-
-				/*
-				* testing to make sure the correct numbers of stuff is there
-				System.out.println("ten DOLLARS\t : " + dollarAmount);
-				System.out.println("five DOLLARS\t : " + dollarAmount);
-				System.out.println("DOLLARS\t : " + dollarAmount);
-				System.out.println("QUARTERS : " + quarterAmount);
-				System.out.println("DIMES\t : " + dimeAmount);
-				System.out.println("NICKELS\t : " + nickelAmount);
-				System.out.println("PENNIES\t : " + pennyAmount);
-				*/
 
 				System.out.println("\nBILLS : " + numberOfDollars);
 				System.out.println("COINS : " + numberOfCoins);
