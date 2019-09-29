@@ -91,7 +91,7 @@ public class ProblemSet2 {
 				final double FIVE_DOLLAR_VALUE = 5;
 				final double TEN_DOLLAR_VALUE = 10;
 
-				System.out.print("\nEnter dollar amount: ");
+				System.out.print("\nEnter a dollar amount: ");
 				moneyAmount = Double.valueOf(in.next());
 
 				int tenAmount = (int) Math.floor(moneyAmount / TEN_DOLLAR_VALUE);
@@ -149,10 +149,10 @@ public class ProblemSet2 {
 				userInches %= INCHES_IN_FOOT;
         int inchAmount = userInches;
 
-        System.out.println("MILES\t: " + mileAmount);
-        System.out.println("YARDS\t: " + yardAmount);
-        System.out.println("FEET\t: " + footAmount);
-        System.out.println("INCHES\t: " + inchAmount);
+        System.out.println("MILES\t\b: " + mileAmount);
+        System.out.println("YARDS\t\b: " + yardAmount);
+        System.out.println("FEET\t\b: " + footAmount);
+        System.out.println("INCHES\t\b: " + inchAmount);
 
         /*
          * Exercise 5.
@@ -161,7 +161,22 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
 
+        final int CENTI_IN_KILO = 100000;
+ 				final int CENTI_IN_METER = 100;
 
+ 				System.out.print("\nEnter a number of centimeters: ");
+ 				int userCenti = (int) Math.round(in.nextInt());
+ 				in.nextLine();
+
+ 				int kiloAmount = userCenti / CENTI_IN_KILO;
+ 				userCenti %= CENTI_IN_KILO;
+ 				int meterAmount = userCenti / CENTI_IN_METER;
+ 				userCenti %= CENTI_IN_METER;
+        int centiAmount = userCenti;
+
+         System.out.println("KILOMETERS  : " + kiloAmount);
+         System.out.println("METERS\t\t\b\b\b\b: " + meterAmount);
+         System.out.println("CENTIMETERS : " + centiAmount);
 
         /*
          * Exercise 6.
