@@ -255,21 +255,6 @@ public class ProblemSet2 {
          * Given a string, reverse and print the first and second halves of that string.
          */
 
-
-        /*
-
-        code that may work better who knows we'll find out eventually
-
-        double halfStrLength = userString.length() - 1;
-        halfStrLength *= 10;
-        halfStrLength /= 2;
-        halfStrLength /= 10;
-        halfStrLength = Math.floor(halfStrLength);
-        String firstHalfStr = userString.substring(0, halfStrLength);
-        String secondHalfStr = userString.substring(halfStrLength);
-
-        */
-
         System.out.print("\n\nEnter a String: ");
     		String userString = in.nextLine();
 
